@@ -111,6 +111,17 @@ document.addEventListener("DOMContentLoaded", function () {
             video.dataset.loaded = 'true';
         };
 
+        // Show poster image via CSS background before src is loaded
+        // (browsers skip the poster attribute when no src is present)
+        villageVideos.forEach(video => {
+            const poster = video.getAttribute('poster');
+            if (poster) {
+                video.style.backgroundImage = 'url(' + poster + ')';
+                video.style.backgroundSize = 'cover';
+                video.style.backgroundPosition = 'center';
+            }
+        });
+
         if (isHoverDevice) {
             // DESKTOP: lazy-load when card approaches viewport, play on hover
             const lazyObserver = new IntersectionObserver((entries) => {
