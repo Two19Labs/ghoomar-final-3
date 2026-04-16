@@ -51,9 +51,7 @@ body::before {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('https://static.wixstatic.com/media/c1b97d_f6e525bf50294c8dbe6e99ebb07c125b~mv2.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: none;
     opacity: 0.05;
     mix-blend-mode: multiply;
     z-index: -1;
@@ -320,8 +318,10 @@ img {
     position: relative;
     width: 100%;
     height: 100vh;
+    height: 100svh;
+    min-height: 560px;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -782,8 +782,8 @@ img {
 .village-hero {
     overflow: hidden;
     min-height: 92vh;
+    min-height: 92svh;
     background-color: #180505;
-    background-image: url('https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png');
     background-size: cover;
     background-position: center;
 }
