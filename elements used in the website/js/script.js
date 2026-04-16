@@ -96,41 +96,59 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Village page gallery videos
-    // Desktop (hover device): src preloaded in HTML, show poster immediately, play on mouseenter, pause on mouseleave
-    // Mobile (touch): scroll-snap container, autoplay whichever video is snapped into view
+    // Poster <img> overlays video until it plays — hides on hover (desktop) or snap (mobile)
     const villageVideos = Array.from(document.querySelectorAll('.village-gallery-video'));
     if (villageVideos.length > 0) {
         const isHoverDevice = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
+        const loadVideo = (video) => {
+            if (video.dataset.loaded === 'true') return;
+            const src = video.dataset.src;
+            if (!src) return;
+            video.src = src;
+            video.load();
+            video.dataset.loaded = 'true';
+        };
+
         if (isHoverDevice) {
-            // DESKTOP: src already set in HTML with preload="metadata" so poster shows immediately.
-            // Only play on hover.
+            // DESKTOP: poster img shows by default. Load video on hover, play it, hide poster.
             villageVideos.forEach(video => {
                 const card = video.closest('.village-video-card');
-                if (card) {
-                    card.addEventListener('mouseenter', () => {
-                        const p = video.play();
-                        if (p && typeof p.catch === 'function') p.catch(() => {});
-                    });
-                    card.addEventListener('mouseleave', () => {
-                        video.pause();
-                    });
-                }
+                if (!card) return;
+                card.addEventListener('mouseenter', () => {
+                    loadVideo(video);
+                    const p = video.play();
+                    if (p && typeof p.catch === 'function') p.catch(() => {});
+                    card.classList.add('is-playing');
+                });
+                card.addEventListener('mouseleave', () => {
+                    video.pause();
+                    card.classList.remove('is-playing');
+                });
             });
 
         } else {
-            // MOBILE: observe within the scroll-snap grid container
+            // MOBILE: scroll-snap grid — autoplay snapped video, show poster on others
             const grid = document.querySelector('.village-video-grid');
 
             const mobileObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const video = entry.target;
+                    const card = video.closest('.village-video-card');
                     if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-                        villageVideos.forEach(v => { if (v !== video) v.pause(); });
+                        loadVideo(video);
+                        villageVideos.forEach(v => {
+                            if (v !== video) {
+                                v.pause();
+                                v.closest('.village-video-card').classList.remove('is-playing');
+                            }
+                        });
                         const p = video.play();
                         if (p && typeof p.catch === 'function') p.catch(() => {});
+                        if (card) card.classList.add('is-playing');
                     } else {
                         video.pause();
+                        if (card) card.classList.remove('is-playing');
                     }
                 });
             }, {
@@ -142,7 +160,12 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         document.addEventListener('visibilitychange', () => {
-            if (document.hidden) villageVideos.forEach(v => v.pause());
+            if (document.hidden) {
+                villageVideos.forEach(v => {
+                    v.pause();
+                    v.closest('.village-video-card').classList.remove('is-playing');
+                });
+            }
         });
     }
 
