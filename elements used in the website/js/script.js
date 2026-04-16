@@ -111,14 +111,16 @@ document.addEventListener("DOMContentLoaded", function () {
             video.dataset.loaded = 'true';
         };
 
-        // Show poster image via CSS background before src is loaded
-        // (browsers skip the poster attribute when no src is present)
+        // Show poster on the card element — background-image on <video> is unreliable.
+        // The card background shows through the video element before its src loads.
         villageVideos.forEach(video => {
             const poster = video.getAttribute('poster');
-            if (poster) {
-                video.style.backgroundImage = 'url(' + poster + ')';
-                video.style.backgroundSize = 'cover';
-                video.style.backgroundPosition = 'center';
+            const card = video.closest('.village-video-card');
+            if (poster && card) {
+                card.style.backgroundImage = 'url(' + poster + ')';
+                card.style.backgroundSize = 'cover';
+                card.style.backgroundPosition = 'center';
+                card.style.backgroundRepeat = 'no-repeat';
             }
         });
 
