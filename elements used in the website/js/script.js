@@ -96,76 +96,62 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Village page gallery videos
-    // Poster <img> overlays video until it plays — hides on hover (desktop) or snap (mobile)
+    // On load: seek each video to 0.01s after metadata loads — forces browser to decode
+    // and display the actual first frame while keeping it paused.
+    // Desktop: play on hover, pause on leave.
+    // Mobile: scroll-snap autoplay.
     const villageVideos = Array.from(document.querySelectorAll('.village-gallery-video'));
     if (villageVideos.length > 0) {
         const isHoverDevice = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-        const loadVideo = (video) => {
-            if (video.dataset.loaded === 'true') return;
-            const src = video.dataset.src;
-            if (!src) return;
-            video.src = src;
-            video.load();
-            video.dataset.loaded = 'true';
-        };
+        // Force first frame to render for all videos
+        villageVideos.forEach(video => {
+            const showFirstFrame = () => {
+                video.currentTime = 0.01;
+            };
+            if (video.readyState >= 1) {
+                showFirstFrame();
+            } else {
+                video.addEventListener('loadedmetadata', showFirstFrame, { once: true });
+            }
+        });
 
         if (isHoverDevice) {
-            // DESKTOP: poster img shows by default. Load video on hover, play it, hide poster.
+            // DESKTOP: play on hover, pause and return to first frame on leave
             villageVideos.forEach(video => {
                 const card = video.closest('.village-video-card');
                 if (!card) return;
                 card.addEventListener('mouseenter', () => {
-                    loadVideo(video);
                     const p = video.play();
                     if (p && typeof p.catch === 'function') p.catch(() => {});
-                    card.classList.add('is-playing');
                 });
                 card.addEventListener('mouseleave', () => {
                     video.pause();
-                    card.classList.remove('is-playing');
+                    video.currentTime = 0.01;
                 });
             });
 
         } else {
-            // MOBILE: scroll-snap grid — autoplay snapped video, show poster on others
+            // MOBILE: scroll-snap — autoplay snapped video, pause others
             const grid = document.querySelector('.village-video-grid');
-
             const mobileObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const video = entry.target;
-                    const card = video.closest('.village-video-card');
                     if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
-                        loadVideo(video);
-                        villageVideos.forEach(v => {
-                            if (v !== video) {
-                                v.pause();
-                                v.closest('.village-video-card').classList.remove('is-playing');
-                            }
-                        });
+                        villageVideos.forEach(v => { if (v !== video) v.pause(); });
                         const p = video.play();
                         if (p && typeof p.catch === 'function') p.catch(() => {});
-                        if (card) card.classList.add('is-playing');
                     } else {
                         video.pause();
-                        if (card) card.classList.remove('is-playing');
                     }
                 });
-            }, {
-                root: grid,
-                threshold: 0.5
-            });
+            }, { root: grid, threshold: 0.5 });
 
             villageVideos.forEach(v => mobileObserver.observe(v));
         }
 
         document.addEventListener('visibilitychange', () => {
-            if (document.hidden) {
-                villageVideos.forEach(v => {
-                    v.pause();
-                    v.closest('.village-video-card').classList.remove('is-playing');
-                });
-            }
+            if (document.hidden) villageVideos.forEach(v => v.pause());
         });
     }
 
