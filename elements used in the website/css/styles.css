@@ -100,7 +100,7 @@ img {
 
 .section-title {
     text-align: center;
-    margin: 60px 0 40px;
+    margin: 36px 0 24px;
     position: relative;
 }
 
@@ -380,7 +380,7 @@ img {
 
 /* Culinary Journey / About */
 .culinary-journey {
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .journey-grid {
@@ -417,7 +417,7 @@ img {
 
 /* Menu Offers Grid */
 .offers {
-    padding: 80px 0;
+    padding: 50px 0;
     position: relative;
 }
 
@@ -459,7 +459,7 @@ img {
 
 /* Select Outlet Pricing Section */
 .outlet-pricing {
-    padding: 80px 0;
+    padding: 50px 0;
     position: relative;
     background: transparent;
 }
@@ -558,7 +558,7 @@ img {
 }
 
 .outlet-list + .outlet-region {
-    margin-top: 60px;
+    margin-top: 36px;
 }
 
 .outlet-region i {
@@ -1199,19 +1199,19 @@ img {
 
     /* Reduce tall section padding */
     .culinary-journey {
-        padding: 60px 0;
+        padding: 40px 0;
     }
 
     .village-experiences {
-        padding: 50px 0 60px;
+        padding: 40px 0 50px;
     }
 
     .outlet-pricing {
-        padding: 50px 0;
+        padding: 36px 0;
     }
 
     .village-video-showcase {
-        padding: 16px 0 50px;
+        padding: 16px 0 40px;
     }
 
     .journey-text {
@@ -1266,7 +1266,7 @@ img {
     }
 
     .section-title {
-        margin: 40px 0 24px;
+        margin: 28px 0 18px;
     }
 
     .culinary-journey {
@@ -1675,7 +1675,7 @@ body.coming-soon {
    FAMILY FAVOURITES (Thali page)
    ============================================================ */
 .family-favourites {
-    padding: 80px 0;
+    padding: 50px 0;
     position: relative;
 }
 
