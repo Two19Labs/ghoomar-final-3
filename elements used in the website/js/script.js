@@ -132,7 +132,8 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
         } else {
-            // MOBILE: stacked full-screen cards — play the card in view, pause others
+            // MOBILE: scroll-snap — autoplay snapped video, pause others
+            const grid = document.querySelector('.village-video-grid');
             const mobileObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     const video = entry.target;
@@ -144,18 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         video.pause();
                     }
                 });
-            }, { threshold: 0.5 });
+            }, { root: grid, threshold: 0.5 });
 
-            villageVideos.forEach((v, i) => {
-                mobileObserver.observe(v);
-                // Auto-scroll to next card when this video ends
-                v.addEventListener('ended', () => {
-                    if (i < villageVideos.length - 1) {
-                        const nextCard = villageVideos[i + 1].closest('.village-video-card');
-                        if (nextCard) nextCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }
-                });
-            });
+            villageVideos.forEach(v => mobileObserver.observe(v));
         }
 
         document.addEventListener('visibilitychange', () => {
