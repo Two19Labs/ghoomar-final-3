@@ -1006,12 +1006,14 @@ img {
     margin-bottom: 18px;
     padding-bottom: 18px;
     border-bottom: 1px solid var(--glass-border);
+    width: 100%;
 }
 
 .visit-info-group p {
     margin-bottom: 6px;
     color: var(--text-color, #2A0E0E);
     font-size: 0.97rem;
+    text-align: center;
 }
 
 .visit-info-group p a {
