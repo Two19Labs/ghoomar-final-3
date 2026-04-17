@@ -1970,10 +1970,10 @@ body.coming-soon {
 
 .family-pricing-heading {
     text-align: center;
-    font-size: 0.78rem;
-    letter-spacing: 2.5px;
+    font-size: 0.82rem;
+    letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.45);
     margin: 0 0 24px;
 }
 
