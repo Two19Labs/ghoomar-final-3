@@ -1821,7 +1821,7 @@ body.coming-soon {
 .family-chip {
     background: rgba(212, 175, 55, 0.12);
     border: 1px solid rgba(212, 175, 55, 0.4);
-    padding: 10px 18px;
+    padding: 7px 14px;
     border-radius: 30px;
     color: var(--text-color);
     font-size: 0.95rem;
