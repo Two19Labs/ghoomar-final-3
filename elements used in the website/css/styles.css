@@ -2049,9 +2049,6 @@ body.coming-soon {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
-    .fp-featured {
-        transform: none;
-    }
     .fp-featured:hover {
         transform: translateY(-6px);
     }
