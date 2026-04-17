@@ -2347,32 +2347,60 @@ body.coming-soon {
 }
 
 @media (max-width: 768px) {
+    .menu-inquiry-wrap {
+        padding: 22px 18px;
+        margin-top: 28px;
+    }
+
+    .miq-header {
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .miq-icon {
+        font-size: 1.8rem;
+    }
+
+    .miq-heading {
+        font-size: 1.15rem;
+        margin-bottom: 4px;
+    }
+
+    .miq-sub {
+        font-size: 0.88rem;
+    }
+
     .miq-fields {
         grid-template-columns: 1fr;
         gap: 12px;
     }
 
-    .menu-inquiry-wrap {
-        padding: 24px 18px;
-        margin-top: 28px;
+    /* Prevent iOS Safari auto-zoom on input focus (requires >= 16px) */
+    .miq-field input,
+    .miq-field select {
+        font-size: 1rem;
+        padding: 11px 14px;
     }
 
     .miq-submit {
         width: 100%;
         justify-content: center;
+        padding: 13px 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .miq-heading {
-        font-size: 1.1rem;
-    }
-
-    .miq-icon {
-        font-size: 1.6rem;
-    }
-
     .menu-inquiry-wrap {
-        padding: 20px 14px;
+        padding: 18px 12px;
+        border-radius: 12px;
+    }
+
+    .miq-field label {
+        font-size: 0.78rem;
+    }
+
+    .miq-fields {
+        gap: 10px;
     }
 }
