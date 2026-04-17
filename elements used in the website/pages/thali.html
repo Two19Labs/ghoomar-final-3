@@ -470,5 +470,62 @@
             window.open('https://wa.me/918803980000?text=' + encodeURIComponent(message), '_blank');
         });
     </script>
+
+    <script>
+        /* ---- Thali nav: scroll-spy + scrolled shadow + hamburger ---- */
+        (function () {
+            const nav       = document.getElementById('thaliNav');
+            const links     = document.querySelectorAll('.thali-nav-link');
+            const hamburger = document.getElementById('thaliHamburger');
+            const drawer    = document.getElementById('thaliNavLinks');
+            const logo      = document.getElementById('thaliNavLogo');
+
+            // Sections to spy on (in DOM order)
+            const sections = Array.from(
+                document.querySelectorAll('section[id], footer[id]')
+            );
+
+            // Logo click → scroll to top
+            logo.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Hamburger toggle
+            hamburger.addEventListener('click', function () {
+                const open = hamburger.classList.toggle('open');
+                drawer.classList.toggle('open', open);
+                hamburger.setAttribute('aria-expanded', open);
+            });
+
+            // Close drawer when a mobile link is tapped
+            links.forEach(function (a) {
+                a.addEventListener('click', function () {
+                    hamburger.classList.remove('open');
+                    drawer.classList.remove('open');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Scroll handler: shadow + active link
+            function onScroll() {
+                nav.classList.toggle('scrolled', window.scrollY > 30);
+
+                let current = '';
+                sections.forEach(function (sec) {
+                    if (window.scrollY >= sec.offsetTop - 90) {
+                        current = sec.id;
+                    }
+                });
+
+                links.forEach(function (a) {
+                    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+                });
+            }
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll(); // run once on load
+        }());
+    </script>
 </body>
 </html>
