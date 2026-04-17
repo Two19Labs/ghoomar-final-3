@@ -1306,8 +1306,9 @@ img {
     }
 
     .visit-map-col {
+        min-height: 280px;
         height: 280px;
-        min-height: 260px;
+        position: relative;
     }
 
     .village-visit-actions {
