@@ -2423,74 +2423,78 @@ body.coming-soon {
     font-size: 0.68rem;
     letter-spacing: 3px;
     text-transform: uppercase;
-    color: rgba(212, 175, 55, 0.65);
-    margin-bottom: 14px;
+    color: rgba(212, 175, 55, 0.85);
+    margin-bottom: 12px;
 }
 
 .fp-size {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: rgba(255,255,255,0.75);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.92);
     line-height: 1;
     margin-bottom: 16px;
     letter-spacing: 0;
 }
 
 .fp-size i {
-    font-size: 0.9em;
-    opacity: 0.5;
-    margin-right: 5px;
+    font-size: 0.85em;
+    opacity: 0.6;
+    margin-right: 6px;
 }
 
 .fp-divider {
-    width: 36px;
+    width: 40px;
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(212,175,55,0.5), transparent);
-    margin: 0 auto 16px;
+    background: linear-gradient(90deg, transparent, rgba(212,175,55,0.6), transparent);
+    margin: 0 auto 18px;
 }
 
-/* Two-row rate table inside each card */
+/* Per-person row centered */
 .fp-rate-table {
     display: flex;
     flex-direction: column;
     gap: 0;
-    margin-bottom: 14px;
-    text-align: left;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .fp-rate-row {
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
     padding: 6px 0;
 }
 
 .fp-rate-label {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.42);
-    letter-spacing: 0.3px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.55);
     white-space: nowrap;
 }
 
 .fp-rate-value {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.88);
     white-space: nowrap;
 }
 
 .fp-total-row {
-    border-top: 1px solid rgba(212,175,55,0.18);
+    border-top: 1px solid rgba(212,175,55,0.25);
+    margin-top: 4px;
+    padding-top: 10px;
 }
 
 .fp-total-value {
-    font-size: 1.6rem;
+    font-size: 1.75rem;
     font-weight: 800;
     color: #FBC817;
     letter-spacing: -0.5px;
     white-space: nowrap;
     line-height: 1.1;
+    text-shadow: 0 0 20px rgba(251,200,23,0.3);
 }
 
 .fp-savings-row {
@@ -2501,18 +2505,18 @@ body.coming-soon {
 }
 
 .fp-strike {
-    color: rgba(255,255,255,0.32);
+    color: rgba(255,255,255,0.38);
     text-decoration: line-through;
-    font-size: 0.8rem;
+    font-size: 0.82rem;
 }
 
 .fp-save {
     display: inline-block;
-    background: rgba(74, 222, 128, 0.13);
-    border: 1px solid rgba(74, 222, 128, 0.28);
+    background: rgba(74, 222, 128, 0.15);
+    border: 1px solid rgba(74, 222, 128, 0.35);
     color: #4ade80;
     font-size: 0.72rem;
-    font-weight: 600;
+    font-weight: 700;
     padding: 4px 12px;
     border-radius: 20px;
     letter-spacing: 0.3px;
