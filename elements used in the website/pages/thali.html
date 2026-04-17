@@ -424,5 +424,31 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="../js/page-transition.js" defer></script>
     <script src="../js/script.js" defer></script>
+
+    <script>
+        document.getElementById('menuInquiryForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const name   = document.getElementById('miq-name').value.trim();
+            const outlet = document.getElementById('miq-outlet').value;
+            const date   = document.getElementById('miq-date').value;
+            const error  = document.getElementById('miqError');
+
+            if (!name || !outlet || !date) {
+                error.textContent = 'Please fill in all three fields before sending.';
+                return;
+            }
+            error.textContent = '';
+
+            const dateObj   = new Date(date + 'T00:00:00');
+            const formatted = dateObj.toLocaleDateString('en-IN', {
+                weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'
+            });
+
+            const message = `Hi! I'm ${name} and I'm planning to visit the Ghoomar Traditional Thali at ${outlet} on ${formatted}. Could you please share the menu for that day? 🙏`;
+
+            window.open('https://wa.me/918803980000?text=' + encodeURIComponent(message), '_blank');
+        });
+    </script>
 </body>
 </html>
