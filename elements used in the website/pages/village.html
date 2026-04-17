@@ -409,11 +409,6 @@
                 document.querySelectorAll('section[id], footer[id]')
             );
 
-            logo.addEventListener('click', function (e) {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            });
-
             hamburger.addEventListener('click', function () {
                 const open = hamburger.classList.toggle('open');
                 drawer.classList.toggle('open', open);
