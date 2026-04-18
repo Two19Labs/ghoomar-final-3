@@ -2217,11 +2217,11 @@ body.master-landing::before {
     transform: translateX(5px);
 }
 
-/* Per-brand card backgrounds — solid logo colours */
-.tile-thali  { background: #C8232B; border-color: #9e1b22; }
-.tile-village { background: #FBE201; border-color: #c9b500; }
+/* Per-brand card backgrounds — exact logo colours */
+.tile-thali  { background: #A31C20; border-color: #7a1418; }
+.tile-village { background: #FBC817; border-color: #c9a010; }
 .tile-yatra   { background: #FFF4C2; border-color: rgba(122, 20, 24, 0.4); }
-.tile-vedanta { background: #2E7D32; border-color: #1d5220; }
+.tile-vedanta { background: #3A7A35; border-color: #2a5a26; }
 
 /* Text colour overrides for dark-background tiles */
 .tile-thali .tile-eyebrow,
@@ -2237,15 +2237,15 @@ body.master-landing::before {
 /* Per-brand button colours */
 .tile-thali .tile-cta {
     background: #fff;
-    color: #C8232B;
+    color: #A31C20;
 }
-.tile-thali:hover .tile-cta { background: #f0e0e0; }
+.tile-thali:hover .tile-cta { background: #f5e0e0; }
 
 .tile-village .tile-cta {
-    background: #2A0E0E;
-    color: #FBE201;
+    background: #A31C21;
+    color: #FBC817;
 }
-.tile-village:hover .tile-cta { background: #1a0808; }
+.tile-village:hover .tile-cta { background: #7a1418; }
 
 .tile-yatra .tile-cta {
     background: var(--brand-maroon);
@@ -2254,7 +2254,7 @@ body.master-landing::before {
 
 .tile-vedanta .tile-cta {
     background: #fff;
-    color: #2E7D32;
+    color: #3A7A35;
 }
 .tile-vedanta:hover .tile-cta { background: #e0f0e0; }
 
