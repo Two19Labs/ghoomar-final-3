@@ -2379,7 +2379,7 @@ body.coming-soon {
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--primary-color);
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .gs-heading {
@@ -2387,14 +2387,14 @@ body.coming-soon {
     font-weight: 700;
     color: var(--text-color);
     line-height: 1.2;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
 }
 
 .gs-body {
     font-size: 0.97rem;
     color: rgba(42, 14, 14, 0.65);
-    line-height: 1.8;
-    margin-bottom: 12px;
+    line-height: 1.7;
+    margin-bottom: 10px;
 }
 
 /* Base figure — no default browser margin */
