@@ -2,5 +2,7 @@
   "outputDirectory": "elements used in the website",
   "buildCommand": null,
   "installCommand": null,
-  "framework": null
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false
 }
