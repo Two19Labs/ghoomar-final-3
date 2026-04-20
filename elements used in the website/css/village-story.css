@@ -1,0 +1,348 @@
+/* village-story.css */
+
+/* General Overrides */
+.village-page {
+    scroll-behavior: smooth;
+}
+
+/* Sticky Booking Bar */
+.sticky-booking-bar {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background: rgba(163, 28, 33, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 12px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.sticky-booking-bar.visible {
+    transform: translateY(0);
+}
+
+.sticky-booking-text {
+    color: #FDF8E8;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.sticky-booking-btn {
+    background: #FBC817;
+    color: #1a0a0a;
+    padding: 8px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.95rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.sticky-booking-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(251, 200, 23, 0.4);
+}
+
+/* Common Act Structuring */
+.village-act {
+    padding: 100px 0;
+    position: relative;
+}
+
+.act-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.act-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.act-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Act 1: The Hook */
+.hero-title.story-hook {
+    font-size: 3.2rem;
+    line-height: 1.2;
+    max-width: 900px;
+    margin: 0 auto 15px auto;
+    background: linear-gradient(to bottom, #fff 40%, #FBC817 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0px 4px 20px rgba(0,0,0,0.4);
+}
+
+/* Act 2: Welcome */
+.act-welcome {
+    background: #FDF8E8;
+    text-align: center;
+}
+
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+.welcome-highlights {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.w-highlight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.w-highlight i {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Act 3: Showcases (Unlimited Food, Entertainment, Apno Ka Saath) */
+.showcase-act {
+    padding: 80px 0;
+    background: #FDF8E8;
+    position: relative;
+}
+
+.showcase-act:nth-child(even) {
+    background: #fff;
+}
+
+.showcase-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.showcase-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.showcase-video-gallery {
+    flex: 1;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 15px;
+    border-radius: 24px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) transparent;
+}
+
+.showcase-video-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.showcase-video-gallery::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.showcase-video-gallery video {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    height: 600px;
+    aspect-ratio: 9/16;
+    display: block;
+    border-radius: 24px;
+    object-fit: cover;
+    background: #000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.showcase-text {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.showcase-text h2 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.showcase-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Act 7: Logistics */
+.act-logistics {
+    background: #fff;
+    padding: 100px 0;
+}
+
+.logistics-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+}
+
+.pricing-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.p-card {
+    background: #FDF8E8;
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(163, 28, 33, 0.1);
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.p-card.featured {
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 10px 30px rgba(163, 28, 33, 0.1);
+}
+
+.featured-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.p-header {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.p-header h4 {
+    margin: 0 0 5px;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.p-header p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.p-prices {
+    display: flex;
+    justify-content: space-around;
+}
+
+.p-price-item {
+    text-align: center;
+}
+
+.p-price-item span {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.p-price-item strong {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.info-card {
+    background: #FDF8E8;
+    border-radius: 20px;
+    padding: 40px;
+    height: 100%;
+}
+
+.info-group {
+    margin-bottom: 30px;
+}
+
+.info-group:last-child {
+    margin-bottom: 0;
+}
+
+.info-group h5 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.info-group p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.info-group i {
+    width: 20px;
+    color: var(--primary-color);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .showcase-row, .showcase-row.reverse, .logistics-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .showcase-video-gallery, .showcase-text {
+        width: 100%;
+        padding: 0;
+    }
+    .showcase-text h2 {
+        font-size: 2.2rem;
+    }
+}
+@media (max-width: 600px) {
+    .act-title { font-size: 2.2rem; }
+    .hero-title.story-hook { font-size: 2.2rem; line-height: 1.25; }
+    .welcome-highlights { flex-direction: column; gap: 15px; }
+    .w-highlight { width: 100%; justify-content: center; }
+    .sticky-booking-text { display: none; }
+    .sticky-booking-bar { padding: 10px; }
+    
+    .showcase-video-gallery video {
+        height: 65vh; /* Scale down slightly on very small screens */
+        max-height: 550px;
+    }
+}

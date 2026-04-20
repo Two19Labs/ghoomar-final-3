@@ -3,349 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghoomar Village | Gurugram's Favorite Weekend Destination</title>
-    <meta name="description" content="Ghoomar Village is a 25,000 sq. ft. festive setup in Gurugram with unlimited food, Kalbelia dance, Kathputli, Jaadugar, pottery, and more.">
+    <title>Ghoomar Village | Step Into Rajasthan</title>
+    <meta name="description" content="Experience Ghoomar Village, a 25,000 sq. ft. experiential space in Gurugram featuring a royal arrival, traditional mela, live performances, and an unlimited feast.">
     <link rel="stylesheet" href="../css/styles.css">
-
+    <link rel="stylesheet" href="../css/village-story.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="village-page">
 
     <nav class="village-nav" id="villageNav">
         <div class="village-nav-inner">
-
             <a href="../index.html" class="village-nav-logo" id="villageNavLogo">
                 <img src="../assets/logos/ghoomar-village.svg" alt="Ghoomar Village">
             </a>
-
             <div class="village-nav-links" id="villageNavLinks">
-                <a href="#what-is"       class="village-nav-link">About</a>
-                <a href="#entry-includes" class="village-nav-link">What's Included</a>
-                <a href="#pricing"       class="village-nav-link">Pricing</a>
-                <a href="#visit"         class="village-nav-link">Visit</a>
-                <a href="#testimonials"  class="village-nav-link">Reviews</a>
+                <a href="#arrival" class="village-nav-link">Arrival</a>
+                <a href="#unlimited-food" class="village-nav-link">Food</a>
+                <a href="#entertainment" class="village-nav-link">Entertainment</a>
+                <a href="#apno-ka-saath" class="village-nav-link">Apno Ka Saath</a>
+                <a href="#logistics" class="village-nav-link">Tickets & Info</a>
             </div>
-
             <div class="village-nav-end">
-                <a href="#contact" class="village-nav-cta">Contact</a>
                 <button class="village-nav-hamburger" id="villageHamburger" aria-label="Toggle menu" aria-expanded="false">
                     <span></span><span></span><span></span>
                 </button>
             </div>
-
         </div>
     </nav>
 
+    <!-- Sticky Booking Bar -->
+    <div class="sticky-booking-bar" id="stickyBookingBar">
+        <span class="sticky-booking-text">Ready to experience Rajasthan in Gurugram?</span>
+        <a href="http://wa.me/919810211031" target="_blank" rel="noopener" class="sticky-booking-btn">Book Your Visit</a>
+    </div>
+
+    <!-- Act 1: The Hook -->
     <section class="hero-section village-hero">
         <video class="village-hero-video" autoplay loop muted playsinline preload="metadata" poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png" src="https://village.ghoomarthali.in/wp-content/uploads/2025/08/In-a-world-thats-always-rushing-time-slows-down-at-Ghoomar-Village.-Laughter-echoes-louder-hu-1.mp4"></video>
         <div class="hero-overlay village-hero-overlay"></div>
         <div class="hero-content village-hero-content">
-            <p class="village-kicker">Gurugram's Favorite Weekend Destination</p>
-            <h1 class="hero-title">Ghoomar Village</h1>
-            <p class="hero-subtitle">One ticket. Endless memories. Treat your family to 25,000 sq. ft. of unlimited food, fun and culture &mdash; all under one roof.</p>
+            <h1 class="hero-title story-hook">25,000 sq.ft. of Unlimited Fun, Unlimited Food, Experience Culture, and Heritage</h1>
+            <p class="hero-subtitle">One Ticket. Endless Memories. Unlock an immersive cultural portal right here in Gurugram.</p>
             <div class="hero-buttons">
-                <a href="#pricing" class="btn-primary hero-btn">See Pricing</a>
-                <a href="videos.html" class="btn-secondary hero-btn">Watch Videos</a>
+                <a href="#arrival" class="btn-primary hero-btn">Begin The Journey</a>
             </div>
         </div>
     </section>
 
-    <section id="what-is" class="culinary-journey village-explainer">
-        <div class="container journey-grid">
-            <div class="journey-text village-story-card">
-                <h3>&bull; <b>WELCOME TO GHOOMAR VILLAGE</b> &bull;</h3>
-                <p>Ghoomar Village is a 25,000 sq. ft. indoor celebration space designed as a living Rajasthani village. One ticket unlocks unlimited food, live folk performances, carnival games and cultural activities &mdash; all in one place, fully air-conditioned, with free basement parking.</p>
-                <p>Specially designed for large families, group gatherings and celebrations, it is Gurugram's blockbuster family entertainment destination &mdash; a space where every corner echoes with culture and every smile speaks of warmth.</p>
-                <div class="village-fact-list">
-                    <span class="village-fact-chip">25,000 sq. ft. festive setup</span>
-                    <span class="village-fact-chip">20+ starters unlimited</span>
-                    <span class="village-fact-chip">21+ main course items</span>
-                    <span class="village-fact-chip">Fully Air Conditioned</span>
-                    <span class="village-fact-chip">Free Basement Parking</span>
-                </div>
-            </div>
-            <div class="journey-images">
-                <img src="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png" alt="Ghoomar Village Setup" class="interior-img">
-            </div>
-        </div>
-    </section>
-
-    <section id="entry-includes" class="village-experiences">
+    <!-- Act 2: The Welcome -->
+    <section id="arrival" class="village-act act-welcome">
         <div class="container">
-            <h3 class="section-title">&bull; <b>WHAT YOUR ENTRY INCLUDES</b> &bull;</h3>
-            <div class="village-experience-grid">
-                <article class="village-experience-card">
-                    <div class="village-experience-icon"><i class="fas fa-utensils"></i></div>
-                    <h4>Unlimited Food</h4>
-                    <p>20+ starters and 21+ main course items &mdash; 100% pure vegetarian, served Rajasthani style.</p>
-                </article>
-                <article class="village-experience-card">
-                    <div class="village-experience-icon"><i class="fas fa-music"></i></div>
-                    <h4>Kalbeliya Dancers</h4>
-                    <p>Live folk performances, Bhopa live music and the rhythm of Rajasthan all evening long.</p>
-                </article>
-                <article class="village-experience-card">
-                    <div class="village-experience-icon"><i class="fas fa-theater-masks"></i></div>
-                    <h4>Kathputli &amp; Jaadugar</h4>
-                    <p>Puppet shows, magic acts and bioscope storytelling the whole family will remember.</p>
-                </article>
-                <article class="village-experience-card">
-                    <div class="village-experience-icon"><i class="fas fa-hand-sparkles"></i></div>
-                    <h4>Jyotish &amp; Mehendi</h4>
-                    <p>Jyotish readings by Tota Pandit, Khel Gully games, mehendi art and more live experiences.</p>
-                </article>
-                <article class="village-experience-card">
-                    <div class="village-experience-icon"><i class="fas fa-spa"></i></div>
-                    <h4>Champi Maalish</h4>
-                    <p>Relax with a traditional Rajasthani head massage right inside the village.</p>
-                </article>
-                <article class="village-experience-card">
-                    <div class="village-experience-icon"><i class="fas fa-palette"></i></div>
-                    <h4>Pottery Making</h4>
-                    <p>Get your hands dirty and shape clay with a real Kumhar at our live pottery station.</p>
-                </article>
-                <article class="village-experience-card">
-                    <div class="village-experience-icon"><i class="fas fa-bullseye"></i></div>
-                    <h4>Balloon Shooting &amp; Darts</h4>
-                    <p>Classic carnival games for kids and adults &mdash; play, win, celebrate.</p>
-                </article>
-                <article class="village-experience-card">
-                    <div class="village-experience-icon"><i class="fas fa-people-group"></i></div>
-                    <h4>Apno Ka Saath</h4>
-                    <p>A group-friendly format built for large families, reunions, and celebrations.</p>
-                </article>
+            <div class="act-header">
+                <h2 class="act-title">Padharo Mhare Desh</h2>
+                <p class="act-subtitle">The royal treatment starts before you even enter.</p>
+            </div>
+            <div class="welcome-content">
+                <p>Your immersive journey begins the moment you approach our doors. Feel the warmth of a traditional <strong>Teeka</strong> and the heartbeat of the loud, joyous <strong>Dhol welcome</strong>. You are no longer in a bustling modern city &mdash; you have just stepped into a 25,000 sq. ft. fully air-conditioned, living, breathing Rajasthani village.</p>
+                <div class="welcome-highlights">
+                    <div class="w-highlight"><i class="fas fa-snowflake"></i> 25,000 sq. ft. Air-Conditioned</div>
+                    <div class="w-highlight"><i class="fas fa-drum"></i> Dhol & Teeka Welcome</div>
+                    <div class="w-highlight"><i class="fas fa-car-side"></i> Free Basement Parking</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="pricing" class="outlet-pricing">
+    <!-- Act 3: Showcase Sections -->
+    <section id="unlimited-food" class="showcase-act">
+        <div class="container showcase-row">
+            <div class="showcase-video-gallery">
+                <video autoplay loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/food-1.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/food-2.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/food-3.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/food-4.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/food-5.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/food-6.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/food-7.mp4" type="video/mp4"></video>
+            </div>
+            <div class="showcase-text">
+                <h2 class="act-title" style="text-align: left;">Unlimited Food</h2>
+                <p>Indulge in 20+ starters and 21+ main course dishes, all unlimited, freshly prepared, and served with royal hospitality—a pure vegetarian feast inspired by traditional Indian flavors.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="entertainment" class="showcase-act">
+        <div class="container showcase-row reverse">
+            <div class="showcase-video-gallery">
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/ent-1.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/ent-2.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/ent-3.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/ent-5.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/ent-6.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/ent-7.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/ent-8.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/ent-9.mp4" type="video/mp4"></video>
+            </div>
+            <div class="showcase-text">
+                <h2 class="act-title" style="text-align: left;">Endless Entertainment</h2>
+                <p>From live folk dances and puppet shows to magic acts, games, and interactive experiences — every corner of Ghoomar Village is alive with joy and nonstop engagement.</p>
+                <p>Step into a living stage of traditions where Rajasthan’s culture comes alive through music, performances, rituals, and timeless village art forms.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="apno-ka-saath" class="showcase-act">
+        <div class="container showcase-row">
+            <div class="showcase-video-gallery">
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/community-1.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/community-2.mp4" type="video/mp4"></video>
+                <video loop muted playsinline poster="https://village.ghoomarthali.in/wp-content/uploads/2025/09/Ghoomar-Village-Top.png"><source src="../assets/village/videos/community-3.mp4" type="video/mp4"></video>
+            </div>
+            <div class="showcase-text">
+                <h2 class="act-title" style="text-align: left;">Apno ka Saath</h2>
+                <p>Because celebrations are better together. A space designed for families, friends, and colleagues to laugh, bond, and create memories — just like a real village gathering.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Act 7: The Logistics -->
+    <section id="logistics" class="village-act act-logistics">
         <div class="container">
-            <h3 class="section-title">&bull; <b>PRICING</b> &bull;</h3>
-
-            <h4 style="text-align:center; margin: 10px 0 22px; color: var(--brand-yellow, #FBC817);">Unlimited Village Experience &mdash; 5 PM to 11 PM</h4>
-            <div class="village-pricing-grid">
-                <div class="village-price-card">
-                    <div class="vpc-title">Village Experience</div>
-                    <div class="vpc-days">Mon, Tue, Wed, Thu</div>
-                    <div class="vpc-prices">
-                        <div class="vpc-price">
-                            <span class="label">Kids (5&ndash;10 yrs)</span>
-                            <span class="amount">&#8377;714*</span>
-                        </div>
-                        <div class="vpc-price">
-                            <span class="label">Adults</span>
-                            <span class="amount">&#8377;995*</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="village-price-card highlight">
-                    <div class="vpc-title">Village Experience</div>
-                    <div class="vpc-days">Fri, Sat, Sun</div>
-                    <div class="vpc-prices">
-                        <div class="vpc-price">
-                            <span class="label">Kids (5&ndash;10 yrs)</span>
-                            <span class="amount">&#8377;762*</span>
-                        </div>
-                        <div class="vpc-price">
-                            <span class="label">Adults</span>
-                            <span class="amount">&#8377;1045*</span>
-                        </div>
-                    </div>
-                </div>
+            <div class="act-header">
+                <h2 class="act-title">Claim Your Ticket</h2>
+                <p class="act-subtitle">Choose your preferred experience to step into the village.</p>
             </div>
 
-            <h4 style="text-align:center; margin: 46px 0 22px; color: var(--brand-yellow, #FBC817);">Unlimited Lunch Thali &mdash; 12 PM to 3 PM</h4>
-            <div class="village-pricing-grid">
-                <div class="village-price-card">
-                    <div class="vpc-title">2 Starters + 21 Main Course</div>
-                    <div class="vpc-days">All Days</div>
-                    <div class="vpc-prices">
-                        <div class="vpc-price">
-                            <span class="label">Kids (5&ndash;10 yrs)</span>
-                            <span class="amount">&#8377;395*</span>
+            <div class="logistics-grid">
+                <div class="pricing-cards">
+                    <div class="p-card">
+                        <div class="p-header">
+                            <h4>Unlimited Lunch Thali</h4>
+                            <p>12 PM To 3 PM (Food Focus, No Shows)</p>
                         </div>
-                        <div class="vpc-price">
-                            <span class="label">Adults</span>
-                            <span class="amount">&#8377;595*</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="village-price-card">
-                    <div class="vpc-title">6 Starters + 21 Main Course</div>
-                    <div class="vpc-days">Pre-Booking Only</div>
-                    <div class="vpc-prices">
-                        <div class="vpc-price">
-                            <span class="label">Kids (5&ndash;10 yrs)</span>
-                            <span class="amount">&#8377;495*</span>
-                        </div>
-                        <div class="vpc-price">
-                            <span class="label">Adults</span>
-                            <span class="amount">&#8377;750*</span>
+                        <div class="p-prices">
+                            <div class="p-price-item">
+                                <span>Kids (5-10 yrs)</span>
+                                <strong>&#8377;395*</strong>
+                            </div>
+                            <div class="p-price-item">
+                                <span>Adults</span>
+                                <strong>&#8377;595*</strong>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
 
-            <h4 style="text-align:center; margin: 46px 0 22px; color: var(--brand-yellow, #FBC817);">Add-On: Activities &amp; Performances</h4>
-            <div class="village-addon-grid">
-                <div class="village-addon-card">
-                    <div class="va-price">&#8377;1,500*</div>
-                    <div class="va-kicker">Flat Rate</div>
-                    <div class="va-title">Pick Any 1 Activity</div>
-                    <ul class="va-list">
-                        <li>Entry Dhol, Music &amp; Teeka Welcome</li>
-                        <li>Jyotish</li>
-                        <li>Katputli</li>
-                        <li>Jaadugar</li>
-                        <li>Kalbelia Dancer</li>
-                    </ul>
-                </div>
-                <div class="village-addon-card">
-                    <div class="va-price">&#8377;5,000*</div>
-                    <div class="va-kicker">Flat Rate</div>
-                    <div class="va-title">Pick Any 3 Activities</div>
-                    <ul class="va-list">
-                        <li>Entry Dhol, Music &amp; Teeka Welcome</li>
-                        <li>Jyotish</li>
-                        <li>Katputli</li>
-                        <li>Jaadugar</li>
-                        <li>Kalbelia Dancer</li>
-                    </ul>
-                </div>
-                <div class="village-addon-card featured">
-                    <div class="va-price">&#8377;10,000*</div>
-                    <div class="va-kicker">Flat Rate</div>
-                    <div class="va-title">Complete Village Experience</div>
-                    <ul class="va-list">
-                        <li class="section-label">Cultural Performances</li>
-                        <li>Kalbelia Dancers</li>
-                        <li>Katputli</li>
-                        <li>Jaadugar</li>
-                        <li>Bhopa Live Performance</li>
-                        <li>Bioscope</li>
-                        <li>Jyotish Ji, Tota Pandit</li>
-                        <li>Khel Gully</li>
-                        <li class="section-label">All Activities Indoor</li>
-                        <li class="section-label">Artisan Activities</li>
-                        <li>Champi Maalish</li>
-                        <li>Mehendi</li>
-                        <li>Kumhar / Live Pottery Making</li>
-                    </ul>
-                </div>
-            </div>
-            <p style="text-align:center; margin-top: 26px; font-size:0.95rem; opacity:0.8;">*Govt. taxes extra as applicable. Prices are subject to change without prior notice.</p>
-        </div>
-    </section>
-
-    <section id="visit" class="outlet-pricing village-visit">
-        <div class="container">
-            <h3 class="section-title">&bull; <b>PLAN YOUR VISIT</b> &bull;</h3>
-            <div class="visit-map-layout">
-                <div class="visit-info-col">
-                    <h4 class="visit-info-heading">Visit Us Today</h4>
-                    <p>2nd Floor, M3M Urbana,<br>Sector 67, Gurugram, Haryana 122101</p>
-
-                    <div class="visit-info-group">
-                        <p><strong>Unlimited Lunch:</strong> 12:00 PM &ndash; 3:00 PM</p>
-                        <p><strong>Full Village Experience:</strong> 5:00 PM onwards</p>
-                        <p><strong>Parking:</strong> Free Basement Parking</p>
-                    </div>
-
-                    <div class="visit-info-group">
-                        <p><strong>Phone:</strong> <a href="tel:+919810211031">+91 98 1021 1031</a></p>
-                        <p><strong>WhatsApp:</strong> <a href="http://wa.me/919810211031" target="_blank" rel="noopener">+91 98 1021 1031</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:village@ghoomarthali.in">village@ghoomarthali.in</a></p>
-                    </div>
-
-                    <div class="hero-buttons village-visit-actions">
-                        <a href="http://wa.me/919810211031" class="btn-primary" target="_blank" rel="noopener">Book On WhatsApp</a>
-                        <a href="../assets/village/menu-dinner.pdf" class="btn-secondary" target="_blank" rel="noopener">View Dinner Menu</a>
+                    <div class="p-card featured">
+                        <div class="featured-badge">Highly Recommended</div>
+                        <div class="p-header">
+                            <h4>Unlimited Village Experience</h4>
+                            <p>5 PM To 11 PM (Food + All Entertainment included)</p>
+                        </div>
+                        <div class="p-prices">
+                            <div class="p-price-item">
+                                <span>Kids (5-10 yrs)</span>
+                                <strong>&#8377;714*</strong>
+                            </div>
+                            <div class="p-price-item">
+                                <span>Adults</span>
+                                <strong>&#8377;995*</strong>
+                            </div>
+                        </div>
+                        <p style="font-size: 0.8rem; opacity: 0.7; text-align: center; margin-top: 15px;">*Taxes extra. Prices higher on Fri, Sat, Sun.</p>
                     </div>
                 </div>
 
-                <div class="visit-map-col">
-                    <iframe
-                        src="https://www.google.com/maps?q=M3M+Urbana,+Sector+67,+Gurugram,+Haryana+122101&output=embed&z=16"
-                        class="visit-map-iframe"
-                        allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Ghoomar Village Location">
-                    </iframe>
+                <div class="info-card">
+                    <h3 style="margin-bottom: 25px; color: var(--primary-color);">Plan Your Journey</h3>
+                    
+                    <div class="info-group">
+                        <h5>Venue Location</h5>
+                        <p>2nd Floor, M3M Urbana,<br>Sector 67, Gurugram, Haryana 122101</p>
+                    </div>
+
+                    <div class="info-group">
+                        <h5>Need Assistance?</h5>
+                        <p><i class="fas fa-phone"></i> +91 98 1021 1031<br>
+                        <i class="fas fa-envelope"></i> village@ghoomarthali.in</p>
+                    </div>
+
+                    <div class="hero-buttons" style="margin-top: 30px; justify-content: flex-start;">
+                        <a href="http://wa.me/919810211031" class="btn-primary" target="_blank" rel="noopener">Book on WhatsApp</a>
+                        <a href="../assets/village/menu-dinner.pdf" class="btn-secondary" target="_blank" rel="noopener">View Menu</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="container">
-            <h3 class="section-title">&bull; <b>WHAT OUR GUESTS SAY</b> &bull;</h3>
-            <div class="testimonials-grid">
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-content">"Best family outing in Gurugram! The Kalbelia dance had everyone on their feet and the unlimited food was outstanding. Our kids absolutely loved the pottery station and the magic show — pure joy from start to finish."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=64&h=64&fit=crop&crop=face" alt="Priya Mehta" loading="lazy">
-                        </div>
-                        <div class="testimonial-author-name">Priya Mehta</div>
-                        <span class="testimonial-sep" aria-hidden="true"></span>
-                        <span class="testimonial-role">Family of 10</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-content">"Incredible experience — it truly felt like stepping into Rajasthan without leaving the city. The dhol welcome, Kathputli performance and champi maalish made it completely unforgettable. 10 out of 10 would visit again."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=64&h=64&fit=crop&crop=face" alt="Rahul Sharma" loading="lazy">
-                        </div>
-                        <div class="testimonial-author-name">Rahul Sharma</div>
-                        <span class="testimonial-sep" aria-hidden="true"></span>
-                        <span class="testimonial-role">Weekend Visitor</span>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="testimonial-stars" aria-label="5 out of 5 stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-content">"We keep coming back every month. The food is fresh and delicious every time, and there is always something new to experience. Ghoomar Village is a true cultural gem right in the heart of Gurugram."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=64&h=64&fit=crop&crop=face" alt="Sunita Kapoor" loading="lazy">
-                        </div>
-                        <div class="testimonial-author-name">Sunita Kapoor</div>
-                        <span class="testimonial-sep" aria-hidden="true"></span>
-                        <span class="testimonial-role">Regular Guest</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
+    <!-- Footer -->
     <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-grid">
@@ -355,14 +204,12 @@
                     <p>Village Experience: 5pm &ndash; 11pm</p>
                     <p>Open All Days Of The Week</p>
                 </div>
-
                 <div class="footer-col">
                     <h4><strong>Contact</strong></h4>
                     <p><strong>Phone:</strong> <a href="tel:+918803980000">+91 88039 80000</a></p>
                     <p><strong>WhatsApp:</strong> <a href="http://wa.me/919810211031" target="_blank" rel="noopener">+91 98 1021 1031</a></p>
                     <p><strong>Email:</strong> <a href="mailto:village@ghoomarthali.in">village@ghoomarthali.in</a></p>
                 </div>
-
                 <div class="footer-col">
                     <h4><strong>Follow Us</strong></h4>
                     <p>Watch updates from shows, food launches, and festival nights.</p>
@@ -374,7 +221,6 @@
                 </div>
             </div>
         </div>
-
         <div class="bottom-footer container">
             <div class="copyright">
                 <p>&copy; 2026 Ghoomar Village by Ghoomar Traditional Thali. All Rights Reserved. &nbsp;|&nbsp; <a href="../index.html">Ghoomar Home</a></p>
@@ -394,16 +240,17 @@
     <script src="../js/script.js" defer></script>
 
     <script>
-        /* ---- Village nav: scroll-spy + scrolled shadow + hamburger ---- */
-        (function () {
+        /* ---- Village nav: scroll-spy + scroll effect + sticky booking bar ---- */
+        document.addEventListener('DOMContentLoaded', function () {
             const nav       = document.getElementById('villageNav');
             const links     = document.querySelectorAll('.village-nav-link');
             const hamburger = document.getElementById('villageHamburger');
             const drawer    = document.getElementById('villageNavLinks');
-            const logo      = document.getElementById('villageNavLogo');
+            const stickyBar = document.getElementById('stickyBookingBar');
+            const heroSection = document.querySelector('.hero-section');
 
             const sections = Array.from(
-                document.querySelectorAll('section[id], footer[id]')
+                document.querySelectorAll('section[id]')
             );
 
             hamburger.addEventListener('click', function () {
@@ -425,19 +272,57 @@
 
                 let current = '';
                 sections.forEach(function (sec) {
-                    if (window.scrollY >= sec.offsetTop - 90) {
+                    if (window.scrollY >= sec.offsetTop - 150) {
                         current = sec.id;
                     }
                 });
 
                 links.forEach(function (a) {
-                    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+                    if(current) {
+                        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+                    }
                 });
+
+                if(heroSection) {
+                    if (window.scrollY > heroSection.offsetHeight - 100) {
+                        stickyBar.classList.add('visible');
+                    } else {
+                        stickyBar.classList.remove('visible');
+                    }
+                }
             }
 
             window.addEventListener('scroll', onScroll, { passive: true });
             onScroll();
-        }());
+
+            /* ---- Showcase Video Playback Manager ---- */
+            const galleryVideos = Array.from(document.querySelectorAll('.showcase-video-gallery video'));
+            
+            // Only play 1 video at a time
+            galleryVideos.forEach(vid => {
+                vid.addEventListener('play', () => {
+                    galleryVideos.forEach(other => {
+                        if(other !== vid && !other.paused) {
+                            other.pause();
+                        }
+                    });
+                });
+            });
+
+            // Intersection observer to auto-play only the most prominent video vertically
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.play().catch(()=>{});
+                    } else {
+                        entry.target.pause();
+                    }
+                });
+            }, { threshold: 0.7 });
+
+            galleryVideos.forEach(vid => observer.observe(vid));
+
+        });
     </script>
 </body>
 </html>
