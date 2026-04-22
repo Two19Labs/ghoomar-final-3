@@ -210,67 +210,7 @@
         </div>
     </section>
 
-    <!-- Act 8: What Our Guests Say -->
-    <style>
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        .testimonial-card {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            text-align: left;
-        }
-        .testimonial-stars {
-            color: #A31C21;
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-        .testimonial-content {
-            font-size: 1rem;
-            line-height: 1.6;
-            margin-bottom: 25px;
-            color: #333;
-        }
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: auto;
-        }
-        .testimonial-avatar {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .testimonial-avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .testimonial-author-name {
-            font-weight: 700;
-            color: #111;
-            font-size: 0.95rem;
-        }
-        .testimonial-sep {
-            color: #ccc;
-        }
-        .testimonial-role {
-            color: #888;
-            font-size: 0.85rem;
-        }
-    </style>
-    <section id="reviews" class="village-act showcase-act" style="background: var(--bg-dark, #FDF8E8); padding: 60px 24px;">
+    <section id="reviews" class="village-act showcase-act" style="padding: 60px 0;">
         <div class="container">
             <div class="act-header">
                 <h2 class="act-title">&bull; <b>WHAT OUR GUESTS SAY</b> &bull;</h2>
@@ -287,7 +227,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=64&h=64&fit=crop&crop=face" alt="Arjun Singh">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=64&amp;h=64&amp;fit=crop&amp;crop=face" alt="Arjun Singh" loading="lazy">
                         </div>
                         <div class="testimonial-author-name">Arjun Singh</div>
                         <span class="testimonial-sep">&bull;</span>
@@ -305,7 +245,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=64&h=64&fit=crop&crop=face" alt="Meera Joshi">
+                            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=64&amp;h=64&amp;fit=crop&amp;crop=face" alt="Meera Joshi" loading="lazy">
                         </div>
                         <div class="testimonial-author-name">Meera Joshi</div>
                         <span class="testimonial-sep">&bull;</span>
@@ -323,7 +263,7 @@
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">
-                            <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=64&h=64&fit=crop&crop=face" alt="Vikram Nair">
+                            <img src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=64&amp;h=64&amp;fit=crop&amp;crop=face" alt="Vikram Nair" loading="lazy">
                         </div>
                         <div class="testimonial-author-name">Vikram Nair</div>
                         <span class="testimonial-sep">&bull;</span>
@@ -335,7 +275,7 @@
     </section>
 
     <!-- Act 9: Locate Us -->
-    <section id="map" class="village-act" style="background: var(--bg-dark); padding: 40px 24px;">
+    <section id="map" class="village-act" style="padding: 40px 0;">
         <div class="container">
             <div class="act-header">
                 <h2 class="act-title">&bull; <b>Find Us Here</b> &bull;</h2>
@@ -404,135 +344,6 @@
 
     <script src="../js/page-transition.js" defer></script>
     <script src="../js/script.js" defer></script>
-
-    <script>
-        /* ---- Village nav: scroll-spy + scroll effect + sticky booking bar ---- */
-        document.addEventListener('DOMContentLoaded', function () {
-            const nav         = document.getElementById('villageNav');
-            const links       = document.querySelectorAll('.village-nav-link');
-            const hamburger   = document.getElementById('villageHamburger');
-            const drawer      = document.getElementById('villageNavLinks');
-            const heroSection = document.querySelector('.hero-section');
-
-            const sections = Array.from(
-                document.querySelectorAll('section[id]')
-            );
-
-            hamburger.addEventListener('click', function () {
-                const open = hamburger.classList.toggle('open');
-                drawer.classList.toggle('open', open);
-                hamburger.setAttribute('aria-expanded', open);
-            });
-
-            links.forEach(function (a) {
-                a.addEventListener('click', function () {
-                    hamburger.classList.remove('open');
-                    drawer.classList.remove('open');
-                    hamburger.setAttribute('aria-expanded', 'false');
-                });
-            });
-
-            function onScroll() {
-                nav.classList.toggle('scrolled', window.scrollY > 30);
-
-                let current = '';
-                sections.forEach(function (sec) {
-                    if (window.scrollY >= sec.offsetTop - 150) {
-                        current = sec.id;
-                    }
-                });
-
-                links.forEach(function (a) {
-                    if(current) {
-                        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-                    }
-                });
-            }
-
-            window.addEventListener('scroll', onScroll, { passive: true });
-            onScroll();
-
-            /* ---- Showcase Gallery Manager ---- */
-            document.querySelectorAll('.gallery-wrapper').forEach(wrapper => {
-                const gallery = wrapper.querySelector('.showcase-video-gallery');
-                const vids    = Array.from(gallery.querySelectorAll('video'));
-                const prevBtn = wrapper.querySelector('.gallery-prev');
-                const nextBtn = wrapper.querySelector('.gallery-next');
-                const dotsEl  = wrapper.querySelector('.gallery-dots');
-                let idx = 0;
-
-                // Build dots
-                vids.forEach((_, i) => {
-                    const dot = document.createElement('span');
-                    dot.className = 'gallery-dot' + (i === 0 ? ' active' : '');
-                    dot.addEventListener('click', () => goTo(i));
-                    dotsEl.appendChild(dot);
-                });
-
-                function updateDots() {
-                    dotsEl.querySelectorAll('.gallery-dot').forEach((d, i) => {
-                        d.classList.toggle('active', i === idx);
-                    });
-                }
-
-                function goTo(n) {
-                    vids.forEach(v => { v.pause(); v.currentTime = 0; });
-                    idx = ((n % vids.length) + vids.length) % vids.length;
-                    updateDots();
-                    // Use the video element's own offsetLeft for reliable scroll position
-                    const targetVid = vids[idx];
-                    requestAnimationFrame(() => {
-                        gallery.scrollLeft = targetVid.offsetLeft;
-                        targetVid.play().catch(() => {});
-                    });
-                }
-
-                prevBtn.addEventListener('click', () => goTo(idx - 1));
-                nextBtn.addEventListener('click', () => goTo(idx + 1));
-                vids.forEach((v, i) => v.addEventListener('ended', () => goTo(i + 1)));
-
-                // Play first video when section enters viewport; reset when leaving
-                new IntersectionObserver(entries => {
-                    if (entries[0].isIntersecting) {
-                        goTo(0);
-                    } else {
-                        vids.forEach(v => v.pause());
-                    }
-                }, { threshold: 0.3 }).observe(wrapper);
-            });
-
-            /* ---- Master Menu Modal Logic ---- */
-            const menuBtn = document.getElementById('openMasterMenu');
-            const menuModal = document.createElement('div');
-            menuModal.className = 'menu-modal';
-            menuModal.innerHTML = `
-                <span class="close-menu-modal">&times;</span>
-                <img src="../assets/village/master-menu.png" alt="Ghoomar Village Master Menu">
-            `;
-            document.body.appendChild(menuModal);
-
-            const menuBtnMap = document.getElementById('openMasterMenuMap');
-            [menuBtn, menuBtnMap].forEach(btn => {
-                if(btn) {
-                    btn.addEventListener('click', () => {
-                        menuModal.classList.add('active');
-                        document.body.style.overflow = 'hidden';
-                    });
-                }
-            });
-
-            const closeBtn = menuModal.querySelector('.close-menu-modal');
-            const closeModal = () => {
-                menuModal.classList.remove('active');
-                document.body.style.overflow = '';
-            };
-
-            closeBtn.addEventListener('click', closeModal);
-            menuModal.addEventListener('click', (e) => {
-                if (e.target === menuModal) closeModal();
-            });
-
-        });
-    </script>
+    <script src="../js/village.js" defer></script>
 </body>
 </html>
