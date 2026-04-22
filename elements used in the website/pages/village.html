@@ -5,132 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ghoomar Village | Step Into Rajasthan</title>
     <meta name="description" content="Experience Ghoomar Village, a 25,000 sq. ft. experiential space in Gurugram featuring a royal arrival, traditional mela, live performances, and an unlimited feast.">
-    <link rel="stylesheet" href="../css/styles.css">
+<link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/village-story.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Master Menu Lightbox */
-        .menu-modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.9);
-            z-index: 9999;
-            display: none;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
-            cursor: zoom-out;
-        }
-        .menu-modal.active { display: flex; }
-        .menu-modal img {
-            max-width: 100%;
-            max-height: 90vh;
-            border-radius: 12px;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
-            cursor: default;
-        }
-        .close-menu-modal {
-            position: absolute;
-            top: 20px; right: 25px;
-            color: #fff;
-            font-size: 2.5rem;
-            cursor: pointer;
-            z-index: 10;
-        }
-
-        /* Location Card Style */
-        .map-card { 
-            margin-top: 50px; 
-            background: #FFF; 
-            border-radius: 24px; 
-            overflow: hidden; 
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1); 
-            border: 1px solid rgba(163, 28, 33, 0.1); 
-            position: relative; 
-            max-width: 700px; 
-            margin-left: auto; 
-            margin-right: auto;
-            margin-bottom: 80px;
-        }
-        .map-card-actions { 
-            padding: 30px; 
-            display: flex; 
-            flex-direction: column; 
-            gap: 15px; 
-            background: #FFFDF3;
-        }
-        .map-btn-main { 
-            display: block; 
-            width: 100%; 
-            padding: 16px 24px; 
-            border-radius: 50px; 
-            font-weight: 700; 
-            text-transform: uppercase; 
-            text-align: center; 
-            font-size: 0.95rem; 
-            letter-spacing: 1.2px; 
-            transition: all 0.3s ease; 
-            cursor: pointer;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            text-decoration: none;
-            font-family: 'Outfit', sans-serif;
-        }
-        .btn-wa { 
-            background: #A31C21; 
-            color: white !important; 
-            border: none;
-        }
-        .btn-wa:hover { 
-            background: #8B181C; 
-            transform: translateY(-2px); 
-            box-shadow: 0 8px 25px rgba(163, 28, 33, 0.4);
-        }
-        .btn-menu-outline { 
-            background: white !important; 
-            color: #A31C21 !important; 
-            border: 2px solid #A31C21;
-        }
-        .btn-menu-outline:hover { 
-            background: #A31C21 !important; 
-            color: white !important; 
-            transform: translateY(-2px);
-        }
-        .map-frame-container { 
-            height: 450px; 
-            position: relative; 
-            border-top: 2px solid #FDF8E8;
-        }
-        .map-frame-container iframe { 
-            width: 100%; 
-            height: 100%; 
-            border: 0; 
-        }
-        .open-in-maps-btn { 
-            position: absolute; 
-            top: 20px; 
-            left: 20px; 
-            background: #FFF; 
-            color: #1a73e8; 
-            padding: 10px 20px; 
-            border-radius: 10px; 
-            font-size: 1rem; 
-            font-weight: 600; 
-            box-shadow: 0 6px 20px rgba(0,0,0,0.15); 
-            display: flex; 
-            align-items: center; 
-            gap: 10px; 
-            z-index: 5;
-            transition: 0.3s;
-            text-decoration: none;
-        }
-        .open-in-maps-btn:hover { 
-            transform: translateY(-2px); 
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2); 
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body class="village-page">
 

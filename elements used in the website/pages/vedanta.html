@@ -5,165 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vedanta By Ghoomar | Pure Veg Multicuisine Fine Dining in Varanasi</title>
     <meta name="description" content="Vedanta By Ghoomar is a pure vegetarian multicuisine fine-dining experience in Varanasi, rooted in Indian hospitality and signature Ghoomar warmth.">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="../css/styles.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <style>
-        .vedanta-logo-wrap {
-            display: inline-block;
-            max-width: 640px;
-            width: min(90vw, 640px);
-            margin-bottom: 10px;
-            filter: drop-shadow(0 8px 28px rgba(0, 0, 0, 0.45));
-        }
-
-        .vedanta-logo-wrap img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .vedanta-map-card {
-            margin-top: 26px;
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid rgba(163, 28, 33, 0.18);
-            box-shadow: 0 8px 24px rgba(42, 14, 14, 0.12);
-        }
-
-        .vedanta-map-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            padding: 16px;
-            background: rgba(255, 244, 194, 0.72);
-            border-bottom: 1px solid rgba(163, 28, 33, 0.15);
-        }
-
-        .vedanta-map-actions .btn-primary,
-        .vedanta-map-actions .btn-secondary {
-            font-size: 0.88rem;
-            letter-spacing: 0.6px;
-        }
-
-        .vedanta-map-frame {
-            height: 360px;
-            width: 100%;
-            border: 0;
-            display: block;
-        }
-
-        .vedanta-mini-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
-            margin-top: 24px;
-        }
-
-        .vedanta-mini-grid img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 12px;
-            border: 1px solid rgba(163, 28, 33, 0.16);
-            box-shadow: 0 4px 14px rgba(42, 14, 14, 0.1);
-        }
-
-        @media (max-width: 700px) {
-            .vedanta-mini-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .vedanta-map-actions {
-                flex-direction: column;
-            }
-
-            .vedanta-map-actions a {
-                width: 100%;
-                text-align: center;
-            }
-        }
-
-        /* Laptop optimization */
-        @media (min-width: 701px) and (max-width: 1440px) {
-            .thali-nav-inner {
-                max-width: 100%;
-                padding: 0 20px;
-            }
-
-            .thali-nav-links {
-                gap: 18px;
-            }
-
-            .thali-nav-link {
-                font-size: 0.8rem;
-            }
-
-            .thali-nav-cta {
-                font-size: 0.78rem;
-                padding: 6px 14px;
-            }
-
-            .hero-section {
-                min-height: 88vh;
-                min-height: 88svh;
-            }
-
-            .hero-title {
-                font-size: clamp(2.7rem, 4.2vw, 3.8rem);
-            }
-
-            .hero-subtitle {
-                max-width: 780px;
-                margin-left: auto;
-                margin-right: auto;
-                font-size: clamp(1.05rem, 1.35vw, 1.25rem);
-            }
-
-            .hero-buttons {
-                gap: 12px;
-            }
-
-            .hero-btn {
-                font-size: 0.9rem;
-                padding: 9px 18px;
-            }
-
-            .village-experience-grid {
-                gap: 18px;
-            }
-
-            .village-experience-card {
-                padding: 22px 18px;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 18px;
-            }
-
-            .vedanta-map-frame {
-                height: 320px;
-            }
-        }
-
-        @media (min-width: 701px) and (max-width: 1180px) {
-            .thali-nav-links {
-                gap: 12px;
-            }
-
-            .thali-nav-link {
-                font-size: 0.75rem;
-                letter-spacing: 0.2px;
-            }
-
-            .thali-nav-logo img {
-                width: 92px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body class="vedanta-page">
 
@@ -194,7 +43,7 @@
         </div>
     </nav>
 
-    <section class="hero-section" style="background-image: url('../assets/vedanta/interior-1.jpg');">
+    <section class="hero-section" style="background-image: url('../assets/vedanta/interior-1.jpg'); background-fetchpriority: high;">
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <div class="vedanta-logo-wrap">

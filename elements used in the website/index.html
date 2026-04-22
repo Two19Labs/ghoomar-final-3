@@ -7,10 +7,12 @@
     <meta name="description" content="Ghoomar is a family of Rajasthani hospitality experiences — Ghoomar Traditional Thali, Ghoomar Village, Ghoomar Yatra and Vedanta By Ghoomar.">
     <link rel="stylesheet" href="css/styles.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 </head>
 <body class="master-landing">
 
@@ -36,7 +38,7 @@
     </nav>
 
     <section class="master-hero">
-        <div class="master-hero-bg" style="background-image: url('assets/patterns/hawa-mahal-web.jpg');"></div>
+        <div class="master-hero-bg" style="background-image: url('assets/patterns/hawa-mahal-web.jpg'); background-fetchpriority: high;"></div>
         <div class="master-hero-overlay"></div>
 
         <div class="master-hero-content">
@@ -51,7 +53,7 @@
 
                 <a href="pages/thali.html" class="master-tile tile-thali">
                     <div class="tile-media">
-                        <img src="assets/thali/food/serving-thali-web.jpg" alt="Ghoomar Traditional Thali" loading="eager" width="600" height="220">
+                        <img src="assets/thali/food/serving-thali-web.jpg" alt="Ghoomar Traditional Thali" loading="eager" fetchpriority="high" width="600" height="220">
                     </div>
                     <div class="tile-body">
                         <span class="tile-eyebrow">Dine</span>
